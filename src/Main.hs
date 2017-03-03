@@ -6,8 +6,8 @@ License     : GPL-3
 Maintainer  : john.burnett.c@gmail.com
 
 takes a function f:A -> B and describes its decomposition
-f:A -> B == A -g-> (A/~) -f~-> im f -h-> B
-where g is surjective, f~ is bijective, and h is injective
+f:A -> B = A -g-> (A/~) -f~-> im f -h-> B
+where g is surjective, f~ is bijective, and h is injective.
 -}
 
 module Main where
@@ -63,11 +63,11 @@ main = do
     let imF = f natProjA
     let inject = imF `intersect` z
 
-    putStrLn "f:A -> B where a |-> a^2 and A,B are sets of integers"
+    putStrLn "\nf:A -> B where a |-> a^2 and A,B are sets of integers"
     putStr "A := "
     print setA
 
-    putStrLn "\nf:A -> B == A -g-> (A/~) -f~-> im f -h-> B"
+    putStrLn "\nf:A -> B = A -g-> (A/~) -f~-> im f -h-> B"
     putStrLn "where g is surjective, f~ is bijective, and h is injective"
 
     putStrLn "\ng:A -> (A/~) where g(A) := (A/==)"
